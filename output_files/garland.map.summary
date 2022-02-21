@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Mon Feb 21 21:09:33 2022
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : garland
+Top-level Entity Name : garland
+Family : MAX 10
+Total logic elements : 2,892
+    Total combinational functions : 1,523
+    Dedicated logic registers : 2,192
+Total registers : 2192
+Total pins : 12
+Total virtual pins : 0
+Total memory bits : 983,040
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

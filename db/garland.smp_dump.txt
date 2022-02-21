@@ -1,0 +1,41 @@
+
+State Machine - |garland|garland_logic:inst1|garland_st
+Name garland_st.st_delay garland_st.st_12 garland_st.st_11 garland_st.st_04 garland_st.st_03 garland_st.st_02 garland_st.st_01 garland_st.st_idle 
+garland_st.st_idle 0 0 0 0 0 0 0 0 
+garland_st.st_01 0 0 0 0 0 0 1 1 
+garland_st.st_02 0 0 0 0 0 1 0 1 
+garland_st.st_03 0 0 0 0 1 0 0 1 
+garland_st.st_04 0 0 0 1 0 0 0 1 
+garland_st.st_11 0 0 1 0 0 0 0 1 
+garland_st.st_12 0 1 0 0 0 0 0 1 
+garland_st.st_delay 1 0 0 0 0 0 0 1 
+
+State Machine - |garland|RGB_logic:inst3|st
+Name st.st_delay st.st_form_pocket st.st_4 st.st_3 st.st_2_BG_2 st.st_2_BG_1 st.st_2_RB_2 st.st_2_RB_1 st.st_2_GR_2 st.st_2_GR_1 st.st_2_0 st.st_1_3 st.st_1_2 st.st_1_1 st.st_1_0 st.st_send st.st_idle 
+st.st_idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+st.st_send 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+st.st_1_0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+st.st_1_1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+st.st_1_2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+st.st_1_3 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+st.st_2_0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+st.st_2_GR_1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+st.st_2_GR_2 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+st.st_2_RB_1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+st.st_2_RB_2 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+st.st_2_BG_1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+st.st_2_BG_2 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+st.st_3 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.st_4 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.st_form_pocket 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.st_delay 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |garland|RGB_LED:inst2|led_st
+Name led_st.st_rst_delay led_st.st_led_count led_st.st_bits_count led_st.st_send_0 led_st.st_send_1 led_st.st_read_bit led_st.st_idle 
+led_st.st_idle 0 0 0 0 0 0 0 
+led_st.st_read_bit 0 0 0 0 0 1 1 
+led_st.st_send_1 0 0 0 0 1 0 1 
+led_st.st_send_0 0 0 0 1 0 0 1 
+led_st.st_bits_count 0 0 1 0 0 0 1 
+led_st.st_led_count 0 1 0 0 0 0 1 
+led_st.st_rst_delay 1 0 0 0 0 0 1 
