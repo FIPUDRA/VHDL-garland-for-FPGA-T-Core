@@ -68,10 +68,8 @@ signal button_buff_2: std_logic;
 signal delay: integer range 0 to delay_max:=0;
 BEGIN
 
-logic:process(i_clk,button_0,button_1,sw, button_buff)
+logic:process(i_clk,button_0,button_1,sw)
     begin
-        button_buff <= button_1;
-
         if button_0 = '0' then
             led_data <= (others => '0');
             count_for_st_1and2<=0;

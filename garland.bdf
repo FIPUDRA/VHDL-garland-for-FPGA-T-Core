@@ -280,7 +280,7 @@ refer to the applicable agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"delay_max"
-		"6250000"
+		"3125000"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
