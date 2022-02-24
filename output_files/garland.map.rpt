@@ -1,5 +1,5 @@
 Analysis & Synthesis report for garland
-Thu Feb 24 11:50:30 2022
+Thu Feb 24 15:32:10 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -57,15 +57,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Feb 24 11:50:30 2022       ;
+; Analysis & Synthesis Status        ; Successful - Thu Feb 24 15:32:10 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; garland                                     ;
 ; Top-level Entity Name              ; garland                                     ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 2,892                                       ;
-;     Total combinational functions  ; 1,522                                       ;
-;     Dedicated logic registers      ; 2,192                                       ;
-; Total registers                    ; 2192                                        ;
+; Total logic elements               ; 2,970                                       ;
+;     Total combinational functions  ; 1,497                                       ;
+;     Dedicated logic registers      ; 2,269                                       ;
+; Total registers                    ; 2269                                        ;
 ; Total pins                         ; 12                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 983,040                                     ;
@@ -253,20 +253,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 2,892       ;
+; Estimated Total logic elements              ; 2,970       ;
 ;                                             ;             ;
-; Total combinational functions               ; 1522        ;
+; Total combinational functions               ; 1497        ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 872         ;
-;     -- 3 input functions                    ; 327         ;
-;     -- <=2 input functions                  ; 323         ;
+;     -- 4 input functions                    ; 813         ;
+;     -- 3 input functions                    ; 325         ;
+;     -- <=2 input functions                  ; 359         ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 1312        ;
-;     -- arithmetic mode                      ; 210         ;
+;     -- normal mode                          ; 1285        ;
+;     -- arithmetic mode                      ; 212         ;
 ;                                             ;             ;
-; Total registers                             ; 2192        ;
-;     -- Dedicated logic registers            ; 2192        ;
+; Total registers                             ; 2269        ;
+;     -- Dedicated logic registers            ; 2269        ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
 ; I/O pins                                    ; 12          ;
@@ -275,9 +275,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; i_clk~input ;
-; Maximum fan-out                             ; 1518        ;
-; Total fan-out                               ; 15111       ;
-; Average fan-out                             ; 3.91        ;
+; Maximum fan-out                             ; 1595        ;
+; Total fan-out                               ; 15248       ;
+; Average fan-out                             ; 3.89        ;
 +---------------------------------------------+-------------+
 
 
@@ -286,9 +286,9 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                 ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |garland                                                                                                                                ; 1522 (0)            ; 2192 (0)                  ; 983040      ; 0          ; 0            ; 0       ; 0         ; 12   ; 0            ; 0          ; |garland                                                                                                                                                                                                                                                                                                                                            ; garland                           ; work         ;
-;    |RGB_LED:inst2|                                                                                                                      ; 110 (110)           ; 40 (40)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |garland|RGB_LED:inst2                                                                                                                                                                                                                                                                                                                              ; RGB_LED                           ; work         ;
-;    |RGB_logic:inst3|                                                                                                                    ; 459 (459)           ; 192 (192)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |garland|RGB_logic:inst3                                                                                                                                                                                                                                                                                                                            ; RGB_logic                         ; work         ;
+; |garland                                                                                                                                ; 1497 (1)            ; 2269 (0)                  ; 983040      ; 0          ; 0            ; 0       ; 0         ; 12   ; 0            ; 0          ; |garland                                                                                                                                                                                                                                                                                                                                            ; garland                           ; work         ;
+;    |RGB_LED:inst2|                                                                                                                      ; 155 (155)           ; 39 (39)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |garland|RGB_LED:inst2                                                                                                                                                                                                                                                                                                                              ; RGB_LED                           ; work         ;
+;    |RGB_logic:inst3|                                                                                                                    ; 388 (388)           ; 270 (270)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |garland|RGB_logic:inst3                                                                                                                                                                                                                                                                                                                            ; RGB_logic                         ; work         ;
 ;    |garland_logic:inst1|                                                                                                                ; 49 (49)             ; 40 (40)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |garland|garland_logic:inst1                                                                                                                                                                                                                                                                                                                        ; garland_logic                     ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 125 (1)             ; 91 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |garland|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
 ;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 124 (0)             ; 91 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |garland|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
@@ -542,7 +542,7 @@ Encoding Type:  One-Hot
 +---------------------------------------+----------------------------------------+
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
-; RGB_LED:inst2|count_led[2]            ; Stuck at GND due to stuck port data_in ;
+; RGB_LED:inst2|led_st.st_led_count     ; Stuck at GND due to stuck port data_in ;
 ; Total Number of Removed Registers = 1 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
@@ -552,12 +552,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2192  ;
+; Total registers                              ; 2269  ;
 ; Number of registers using Synchronous Clear  ; 99    ;
 ; Number of registers using Synchronous Load   ; 72    ;
-; Number of registers using Asynchronous Clear ; 756   ;
+; Number of registers using Asynchronous Clear ; 828   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 933   ;
+; Number of registers using Clock Enable       ; 1017  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -587,39 +587,38 @@ Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
-; 4:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |garland|RGB_logic:inst3|led_data[3]    ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |garland|RGB_LED:inst2|count_led[1]     ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |garland|RGB_LED:inst2|short_delay[0]   ;
-; 7:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |garland|RGB_LED:inst2|long_delay[3]    ;
-; 9:1                ; 8 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |garland|RGB_logic:inst3|green[2]       ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 14 LEs               ; 35 LEs                 ; Yes        ; |garland|RGB_logic:inst3|blue[7]        ;
-; 14:1               ; 6 bits    ; 54 LEs        ; 6 LEs                ; 48 LEs                 ; Yes        ; |garland|RGB_logic:inst3|GRB[0][6]      ;
-; 14:1               ; 7 bits    ; 63 LEs        ; 7 LEs                ; 56 LEs                 ; Yes        ; |garland|RGB_logic:inst3|GRB[1][10]     ;
-; 14:1               ; 6 bits    ; 54 LEs        ; 6 LEs                ; 48 LEs                 ; Yes        ; |garland|RGB_logic:inst3|GRB[2][2]      ;
-; 14:1               ; 7 bits    ; 63 LEs        ; 7 LEs                ; 56 LEs                 ; Yes        ; |garland|RGB_logic:inst3|GRB[3][10]     ;
-; 13:1               ; 8 bits    ; 64 LEs        ; 16 LEs               ; 48 LEs                 ; Yes        ; |garland|RGB_logic:inst3|red[1]         ;
-; 18:1               ; 6 bits    ; 72 LEs        ; 6 LEs                ; 66 LEs                 ; Yes        ; |garland|RGB_logic:inst3|GRB[0][15]     ;
-; 18:1               ; 8 bits    ; 96 LEs        ; 8 LEs                ; 88 LEs                 ; Yes        ; |garland|RGB_logic:inst3|GRB[0][22]     ;
-; 18:1               ; 8 bits    ; 96 LEs        ; 8 LEs                ; 88 LEs                 ; Yes        ; |garland|RGB_logic:inst3|GRB[1][18]     ;
-; 18:1               ; 7 bits    ; 84 LEs        ; 7 LEs                ; 77 LEs                 ; Yes        ; |garland|RGB_logic:inst3|GRB[1][0]      ;
-; 18:1               ; 6 bits    ; 72 LEs        ; 6 LEs                ; 66 LEs                 ; Yes        ; |garland|RGB_logic:inst3|GRB[2][10]     ;
-; 18:1               ; 8 bits    ; 96 LEs        ; 8 LEs                ; 88 LEs                 ; Yes        ; |garland|RGB_logic:inst3|GRB[2][20]     ;
-; 18:1               ; 8 bits    ; 96 LEs        ; 8 LEs                ; 88 LEs                 ; Yes        ; |garland|RGB_logic:inst3|GRB[3][22]     ;
-; 18:1               ; 7 bits    ; 84 LEs        ; 7 LEs                ; 77 LEs                 ; Yes        ; |garland|RGB_logic:inst3|GRB[3][0]      ;
-; 8:1                ; 6 bits    ; 30 LEs        ; 24 LEs               ; 6 LEs                  ; No         ; |garland|garland_logic:inst1|garland_st ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |garland|RGB_LED:inst2|led_st.st_send_0 ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |garland|RGB_LED:inst2|led_st.st_idle   ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |garland|RGB_logic:inst3|st.st_idle     ;
-; 13:1               ; 2 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |garland|RGB_logic:inst3|st.st_4        ;
-; 13:1               ; 2 bits    ; 16 LEs        ; 14 LEs               ; 2 LEs                  ; No         ; |garland|RGB_logic:inst3|st.st_1_0      ;
-; 17:1               ; 2 bits    ; 22 LEs        ; 12 LEs               ; 10 LEs                 ; No         ; |garland|RGB_logic:inst3|st.st_1_3      ;
-; 17:1               ; 6 bits    ; 66 LEs        ; 48 LEs               ; 18 LEs                 ; No         ; |garland|RGB_logic:inst3|st.st_2_GR_2   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; 7:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |garland|RGB_LED:inst2|short_delay[3]          ;
+; 7:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |garland|RGB_LED:inst2|long_delay[2]           ;
+; 13:1               ; 8 bits    ; 64 LEs        ; 16 LEs               ; 48 LEs                 ; Yes        ; |garland|RGB_logic:inst3|red[0]                ;
+; 13:1               ; 8 bits    ; 64 LEs        ; 16 LEs               ; 48 LEs                 ; Yes        ; |garland|RGB_logic:inst3|green[4]              ;
+; 13:1               ; 7 bits    ; 56 LEs        ; 14 LEs               ; 42 LEs                 ; Yes        ; |garland|RGB_logic:inst3|blue[2]               ;
+; 16:1               ; 6 bits    ; 60 LEs        ; 6 LEs                ; 54 LEs                 ; Yes        ; |garland|RGB_logic:inst3|GRB[0][1]             ;
+; 16:1               ; 6 bits    ; 60 LEs        ; 6 LEs                ; 54 LEs                 ; Yes        ; |garland|RGB_logic:inst3|GRB[0][15]            ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 7 LEs                ; 63 LEs                 ; Yes        ; |garland|RGB_logic:inst3|GRB[0][18]            ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 7 LEs                ; 63 LEs                 ; Yes        ; |garland|RGB_logic:inst3|GRB[1][13]            ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 8 LEs                ; 72 LEs                 ; Yes        ; |garland|RGB_logic:inst3|GRB[1][17]            ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 7 LEs                ; 63 LEs                 ; Yes        ; |garland|RGB_logic:inst3|GRB[1][4]             ;
+; 16:1               ; 6 bits    ; 60 LEs        ; 6 LEs                ; 54 LEs                 ; Yes        ; |garland|RGB_logic:inst3|GRB[2][2]             ;
+; 16:1               ; 6 bits    ; 60 LEs        ; 6 LEs                ; 54 LEs                 ; Yes        ; |garland|RGB_logic:inst3|GRB[2][13]            ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 7 LEs                ; 63 LEs                 ; Yes        ; |garland|RGB_logic:inst3|GRB[2][18]            ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 7 LEs                ; 63 LEs                 ; Yes        ; |garland|RGB_logic:inst3|GRB[3][12]            ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 8 LEs                ; 72 LEs                 ; Yes        ; |garland|RGB_logic:inst3|GRB[3][18]            ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 7 LEs                ; 63 LEs                 ; Yes        ; |garland|RGB_logic:inst3|GRB[3][4]             ;
+; 11:1               ; 3 bits    ; 21 LEs        ; 15 LEs               ; 6 LEs                  ; Yes        ; |garland|RGB_logic:inst3|count_for_st_1and2[0] ;
+; 8:1                ; 6 bits    ; 30 LEs        ; 24 LEs               ; 6 LEs                  ; No         ; |garland|garland_logic:inst1|garland_st        ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |garland|RGB_LED:inst2|led_st.st_bits_count    ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |garland|RGB_LED:inst2|led_st.st_send_1        ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |garland|RGB_logic:inst3|st.st_delay           ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |garland|RGB_logic:inst3|st.st_3               ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 12 LEs               ; 10 LEs                 ; No         ; |garland|RGB_logic:inst3|st.st_1_3             ;
+; 17:1               ; 6 bits    ; 66 LEs        ; 48 LEs               ; 18 LEs                 ; No         ; |garland|RGB_logic:inst3|st.st_2_RB_1          ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 14 LEs               ; 2 LEs                  ; No         ; |garland|RGB_logic:inst3|st.st_form_pocket     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
 
 
 +-------------------------------------------------------+
@@ -636,10 +635,10 @@ Encoding Type:  One-Hot
 +-----------------+-------+----------------------------------+
 ; Parameter Name  ; Value ; Type                             ;
 +-----------------+-------+----------------------------------+
-; number_of_LEDs  ; 4     ; Signed Integer                   ;
+; number_of_leds  ; 4     ; Signed Integer                   ;
 ; long_timing     ; 40    ; Signed Integer                   ;
 ; short_timing    ; 15    ; Signed Integer                   ;
-; bit_counter_max ; 23    ; Signed Integer                   ;
+; bit_counter_max ; 95    ; Signed Integer                   ;
 ; delay_max       ; 14000 ; Unsigned Integer                 ;
 +-----------------+-------+----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -748,24 +747,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 132                         ;
-; cycloneiii_ff         ; 272                         ;
-;     CLR               ; 39                          ;
-;     ENA               ; 147                         ;
-;     ENA CLR           ; 29                          ;
+; cycloneiii_ff         ; 349                         ;
+;     CLR               ; 36                          ;
+;     ENA               ; 156                         ;
+;     ENA CLR           ; 104                         ;
 ;     ENA CLR SCLR      ; 25                          ;
 ;     ENA SCLR          ; 26                          ;
-;     plain             ; 6                           ;
-; cycloneiii_lcell_comb ; 618                         ;
-;     arith             ; 109                         ;
-;         2 data inputs ; 109                         ;
-;     normal            ; 509                         ;
-;         1 data inputs ; 13                          ;
-;         2 data inputs ; 26                          ;
-;         3 data inputs ; 53                          ;
-;         4 data inputs ; 417                         ;
+;     plain             ; 2                           ;
+; cycloneiii_lcell_comb ; 593                         ;
+;     arith             ; 111                         ;
+;         2 data inputs ; 111                         ;
+;     normal            ; 482                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 14                          ;
+;         2 data inputs ; 58                          ;
+;         3 data inputs ; 51                          ;
+;         4 data inputs ; 358                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 3.37                        ;
+; Max LUT depth         ; 8.00                        ;
+; Average LUT depth     ; 3.57                        ;
 +-----------------------+-----------------------------+
 
 
@@ -774,7 +774,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -787,8 +787,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; RGB_LED:inst2|led_st.st_bits_count ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; RGB_LED:inst2|led_st.st_bits_count     ; N/A     ;
 ; RGB_LED:inst2|led_st.st_idle       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; RGB_LED:inst2|led_st.st_idle~_wirecell ; N/A     ;
 ; RGB_LED:inst2|led_st.st_idle       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; RGB_LED:inst2|led_st.st_idle~_wirecell ; N/A     ;
-; RGB_LED:inst2|led_st.st_led_count  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; RGB_LED:inst2|led_st.st_led_count      ; N/A     ;
-; RGB_LED:inst2|led_st.st_led_count  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; RGB_LED:inst2|led_st.st_led_count      ; N/A     ;
+; RGB_LED:inst2|led_st.st_led_count  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                    ; N/A     ;
+; RGB_LED:inst2|led_st.st_led_count  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GND                                    ; N/A     ;
 ; RGB_LED:inst2|led_st.st_read_bit   ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; RGB_LED:inst2|led_st.st_read_bit       ; N/A     ;
 ; RGB_LED:inst2|led_st.st_read_bit   ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; RGB_LED:inst2|led_st.st_read_bit       ; N/A     ;
 ; RGB_LED:inst2|led_st.st_rst_delay  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; RGB_LED:inst2|led_st.st_rst_delay      ; N/A     ;
@@ -1065,7 +1065,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Feb 24 11:48:38 2022
+    Info: Processing started: Thu Feb 24 15:31:23 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off garland -c garland
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file garland.bdf
@@ -1074,15 +1074,16 @@ Info (12021): Found 2 design units, including 1 entities, in source file garland
     Info (12022): Found design unit 1: garland_logic-garland_logic_architecture File: D:/Code/Quartus/garland/garland_logic.vhd Line: 49
     Info (12023): Found entity 1: garland_logic File: D:/Code/Quartus/garland/garland_logic.vhd Line: 29
 Info (12021): Found 2 design units, including 1 entities, in source file rgb_led.vhd
-    Info (12022): Found design unit 1: RGB_LED-RGB_LED_architecture File: D:/Code/Quartus/garland/RGB_LED.vhd Line: 55
+    Info (12022): Found design unit 1: RGB_LED-RGB_LED_architecture File: D:/Code/Quartus/garland/RGB_LED.vhd Line: 58
     Info (12023): Found entity 1: RGB_LED File: D:/Code/Quartus/garland/RGB_LED.vhd Line: 30
 Info (12021): Found 2 design units, including 1 entities, in source file rgb_logic.vhd
-    Info (12022): Found design unit 1: RGB_logic-RGB_logic_architecture File: D:/Code/Quartus/garland/RGB_logic.vhd Line: 54
+    Info (12022): Found design unit 1: RGB_logic-RGB_logic_architecture File: D:/Code/Quartus/garland/RGB_logic.vhd Line: 56
     Info (12023): Found entity 1: RGB_logic File: D:/Code/Quartus/garland/RGB_logic.vhd Line: 30
 Info (12127): Elaborating entity "garland" for the top level hierarchy
 Info (12128): Elaborating entity "RGB_LED" for hierarchy "RGB_LED:inst2"
+Warning (10036): Verilog HDL or VHDL warning at RGB_LED.vhd(67): object "count_led" assigned a value but never read File: D:/Code/Quartus/garland/RGB_LED.vhd Line: 67
 Info (12128): Elaborating entity "RGB_logic" for hierarchy "RGB_logic:inst3"
-Warning (10492): VHDL Process Statement warning at RGB_logic.vhd(77): signal "sw_buff" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Code/Quartus/garland/RGB_logic.vhd Line: 77
+Warning (10036): Verilog HDL or VHDL warning at RGB_logic.vhd(62): object "i" assigned a value but never read File: D:/Code/Quartus/garland/RGB_logic.vhd Line: 62
 Info (12128): Elaborating entity "garland_logic" for hierarchy "garland_logic:inst1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_uo14.tdf
     Info (12023): Found entity 1: altsyncram_uo14 File: D:/Code/Quartus/garland/db/altsyncram_uo14.tdf Line: 27
@@ -1106,7 +1107,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_drb File: D:/Code/Quartus/garland/db/cmpr_drb.tdf Line: 22
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2022.02.24.12:49:51 Progress: Loading sld6945a69b/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2022.02.24.16:31:52 Progress: Loading sld6945a69b/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1133,15 +1134,15 @@ Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 273 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3050 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3130 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 6 output pins
-    Info (21061): Implemented 2913 logic cells
+    Info (21061): Implemented 2993 logic cells
     Info (21064): Implemented 120 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4845 megabytes
-    Info: Processing ended: Thu Feb 24 11:50:30 2022
-    Info: Elapsed time: 00:01:52
-    Info: Total CPU time (on all processors): 00:02:17
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4863 megabytes
+    Info: Processing ended: Thu Feb 24 15:32:10 2022
+    Info: Elapsed time: 00:00:47
+    Info: Total CPU time (on all processors): 00:01:28
 
 

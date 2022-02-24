@@ -12,18 +12,18 @@
 # 
 # vcom -93 -work work {D:/Code/Quartus/garland/garland_logic.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:49:39 on Feb 21,2022
+# Start time: 15:17:46 on Feb 24,2022
 # vcom -reportprogress 300 -93 -work work D:/Code/Quartus/garland/garland_logic.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity garland_logic
 # -- Compiling architecture garland_logic_architecture of garland_logic
-# End time: 21:49:39 on Feb 21,2022, Elapsed time: 0:00:00
+# End time: 15:17:46 on Feb 24,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Code/Quartus/garland/RGB_LED.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:49:40 on Feb 21,2022
+# Start time: 15:17:46 on Feb 24,2022
 # vcom -reportprogress 300 -93 -work work D:/Code/Quartus/garland/RGB_LED.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -31,11 +31,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RGB_LED
 # -- Compiling architecture RGB_LED_architecture of RGB_LED
-# End time: 21:49:40 on Feb 21,2022, Elapsed time: 0:00:00
+# End time: 15:17:46 on Feb 24,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Code/Quartus/garland/RGB_logic.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:49:40 on Feb 21,2022
+# Start time: 15:17:46 on Feb 24,2022
 # vcom -reportprogress 300 -93 -work work D:/Code/Quartus/garland/RGB_logic.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -43,56 +43,132 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RGB_logic
 # -- Compiling architecture RGB_logic_architecture of RGB_logic
-# End time: 21:49:40 on Feb 21,2022, Elapsed time: 0:00:00
+# End time: 15:17:46 on Feb 24,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-vsim work.rgb_logic
-# vsim work.rgb_logic 
-# Start time: 21:49:59 on Feb 21,2022
+vlog -work rtl_work -refresh -force_refresh
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:17:58 on Feb 24,2022
+# vlog -reportprogress 300 -work rtl_work -refresh -force_refresh 
+# -- Skipping entity garland_logic
+# -- Skipping entity rgb_led
+# -- Skipping entity rgb_logic
+# End time: 15:17:58 on Feb 24,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work rtl_work -refresh -force_refresh
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:17:58 on Feb 24,2022
+# vcom -reportprogress 300 -work rtl_work -refresh -force_refresh 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity garland_logic
+# -- Compiling architecture garland_logic_architecture of garland_logic
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RGB_LED
+# -- Compiling architecture RGB_LED_architecture of RGB_LED
+# -- Compiling entity RGB_logic
+# -- Compiling architecture RGB_logic_architecture of RGB_logic
+# End time: 15:17:58 on Feb 24,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work D:/Code/Quartus/garland/garland.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:18:15 on Feb 24,2022
+# vcom -reportprogress 300 -work work D:/Code/Quartus/garland/garland.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity garland
+# -- Compiling architecture bdf_type of garland
+# End time: 15:18:15 on Feb 24,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.garland
+# vsim work.garland 
+# Start time: 15:18:19 on Feb 24,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
+# Loading work.garland(bdf_type)
+# Loading work.garland_logic(garland_logic_architecture)
 # Loading ieee.numeric_std(body)
+# Loading work.rgb_led(rgb_led_architecture)
 # Loading work.rgb_logic(rgb_logic_architecture)
-add wave -position insertpoint  \
-sim:/rgb_logic/bit_counter_max \
-sim:/rgb_logic/delay_max \
-sim:/rgb_logic/number_of_LEDs \
-sim:/rgb_logic/i_clk \
-sim:/rgb_logic/button_0 \
-sim:/rgb_logic/button_1 \
-sim:/rgb_logic/sw \
-sim:/rgb_logic/feedback_ready \
-sim:/rgb_logic/led_data \
-sim:/rgb_logic/st \
-sim:/rgb_logic/GRB \
-sim:/rgb_logic/i \
-sim:/rgb_logic/green \
-sim:/rgb_logic/red \
-sim:/rgb_logic/blue \
-sim:/rgb_logic/menu \
-sim:/rgb_logic/count_for_st_1and2 \
-sim:/rgb_logic/button_buff \
-sim:/rgb_logic/button_buff_2 \
-sim:/rgb_logic/delay
-force -freeze sim:/rgb_logic/i_clk 1 0, 0 {10 ps} -r 20
-force -freeze sim:/rgb_logic/feedback_ready 1 0
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run -all
-force -freeze sim:/rgb_logic/sw(3) 1 0
-run -all
-force -freeze sim:/rgb_logic/sw 0001 0
-run -all
-run -all
-force -freeze sim:/rgb_logic/sw 1110 0
-run -all
-# End time: 22:35:30 on Feb 21,2022, Elapsed time: 0:45:31
+# ** Fatal: (vsim-3348) Port length (96) does not match actual length (24) for port "/garland/b2v_inst3/led_data".
+#    Time: 0 ps  Iteration: 0  Instance: /garland/b2v_inst3 File: D:/Code/Quartus/garland/RGB_logic.vhd Line: 46
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 15:18:20 on Feb 24,2022, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work D:/Code/Quartus/garland/garland.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:18:49 on Feb 24,2022
+# vcom -reportprogress 300 -work work D:/Code/Quartus/garland/garland.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity garland
+# -- Compiling architecture bdf_type of garland
+# End time: 15:18:49 on Feb 24,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work D:/Code/Quartus/garland/garland.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:18:50 on Feb 24,2022
+# vcom -reportprogress 300 -work work D:/Code/Quartus/garland/garland.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity garland
+# -- Compiling architecture bdf_type of garland
+# End time: 15:18:50 on Feb 24,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.garland
+# vsim work.garland 
+# Start time: 15:18:53 on Feb 24,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.garland(bdf_type)
+# Loading work.garland_logic(garland_logic_architecture)
+# Loading ieee.numeric_std(body)
+# Loading work.rgb_led(rgb_led_architecture)
+# Loading work.rgb_logic(rgb_logic_architecture)
+# ** Fatal: (vsim-3348) Port length (96) does not match actual length (24) for port "/garland/b2v_inst3/led_data".
+#    Time: 0 ps  Iteration: 0  Instance: /garland/b2v_inst3 File: D:/Code/Quartus/garland/RGB_logic.vhd Line: 46
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 15:18:53 on Feb 24,2022, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vsim work.garland(bdf_type)
+# vsim work.garland(bdf_type) 
+# Start time: 15:18:56 on Feb 24,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.garland(bdf_type)
+# Loading work.garland_logic(garland_logic_architecture)
+# Loading ieee.numeric_std(body)
+# Loading work.rgb_led(rgb_led_architecture)
+# Loading work.rgb_logic(rgb_logic_architecture)
+# ** Fatal: (vsim-3348) Port length (96) does not match actual length (24) for port "/garland/b2v_inst3/led_data".
+#    Time: 0 ps  Iteration: 0  Instance: /garland/b2v_inst3 File: D:/Code/Quartus/garland/RGB_logic.vhd Line: 46
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 15:18:56 on Feb 24,2022, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vsim work.garland
+# vsim work.garland 
+# Start time: 15:19:03 on Feb 24,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.garland(bdf_type)
+# Loading work.garland_logic(garland_logic_architecture)
+# Loading ieee.numeric_std(body)
+# Loading work.rgb_led(rgb_led_architecture)
+# Loading work.rgb_logic(rgb_logic_architecture)
+# ** Fatal: (vsim-3348) Port length (96) does not match actual length (24) for port "/garland/b2v_inst3/led_data".
+#    Time: 0 ps  Iteration: 0  Instance: /garland/b2v_inst3 File: D:/Code/Quartus/garland/RGB_logic.vhd Line: 46
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 15:19:03 on Feb 24,2022, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0

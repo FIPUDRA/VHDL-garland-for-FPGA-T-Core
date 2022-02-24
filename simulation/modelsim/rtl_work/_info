@@ -8,37 +8,37 @@ z2
 !i10f 100
 cModel Technology
 Z0 dD:/Code/Quartus/garland/simulation/modelsim
-Egarland_logic
-Z1 w1645197394
+Egarland
+Z1 w1645705050
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z4 8D:/Code/Quartus/garland/garland_logic.vhd
-Z5 FD:/Code/Quartus/garland/garland_logic.vhd
+Z4 8D:/Code/Quartus/garland/garland.vhd
+Z5 FD:/Code/Quartus/garland/garland.vhd
 l0
-L29
-V?LA=f9_IZj]3VoT9nImMW3
-!s100 cckHCUa[2VIW<BaGk6@T_2
+L24
+Vic:gan[Z1gXfS5_RcVghm2
+!s100 [[i=ibk0K_TWWa_5UNXEG0
 Z6 OV;C;10.5b;63
-31
-Z7 !s110 1645469379
+32
+Z7 !s110 1645705130
 !i10b 1
-Z8 !s108 1645469379.000000
-Z9 !s90 -reportprogress|300|-93|-work|work|D:/Code/Quartus/garland/garland_logic.vhd|
-Z10 !s107 D:/Code/Quartus/garland/garland_logic.vhd|
+Z8 !s108 1645705130.000000
+Z9 !s90 -reportprogress|300|-work|work|D:/Code/Quartus/garland/garland.vhd|
+Z10 !s107 D:/Code/Quartus/garland/garland.vhd|
 !i113 1
-Z11 o-93 -work work
+Z11 o-work work
 Z12 tExplicit 1 CvgOpt 0
-Agarland_logic_architecture
+Abdf_type
 R2
 R3
-DEx4 work 13 garland_logic 0 22 ?LA=f9_IZj]3VoT9nImMW3
-l56
-L49
-V2IA2eGDX_GdQ:0aGBMEE@2
-!s100 k=aLgm0cZoIOnNdHCQU2K3
+Z13 DEx4 work 7 garland 0 22 ic:gan[Z1gXfS5_RcVghm2
+l80
+L36
+Z14 VS:A1B???j3BXTJgjQ9ASI0
+Z15 !s100 HS?03YeO^ITjXoz4TUWoo2
 R6
-31
+32
 R7
 !i10b 1
 R8
@@ -47,85 +47,124 @@ R10
 !i113 1
 R11
 R12
-Ergb_led
-Z13 w1645443114
-Z14 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Egarland_logic
 R2
 R3
+31
+Z16 !s110 1645705066
+!i10b 1
+Z17 w1645197394
 R0
-Z15 8D:/Code/Quartus/garland/RGB_LED.vhd
-Z16 FD:/Code/Quartus/garland/RGB_LED.vhd
+Z18 8D:/Code/Quartus/garland/garland_logic.vhd
+Z19 FD:/Code/Quartus/garland/garland_logic.vhd
+l0
+L29
+V?LA=f9_IZj]3VoT9nImMW3
+!s100 cckHCUa[2VIW<BaGk6@T_2
+R6
+Z20 !s108 1645705066.000000
+Z21 !s90 -reportprogress|300|-93|-work|work|D:/Code/Quartus/garland/garland_logic.vhd|
+Z22 !s107 D:/Code/Quartus/garland/garland_logic.vhd|
+!i113 1
+Z23 o-93 -work work
+R12
+Agarland_logic_architecture
+R2
+R3
+DEx4 work 13 garland_logic 0 22 ?LA=f9_IZj]3VoT9nImMW3
+31
+R16
+!i10b 1
+l56
+L49
+V2IA2eGDX_GdQ:0aGBMEE@2
+!s100 k=aLgm0cZoIOnNdHCQU2K3
+R6
+R20
+R21
+R22
+!i113 1
+R23
+R12
+Ergb_led
+Z24 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R2
+R3
+31
+R16
+!i10b 1
+Z25 w1645704421
+R0
+Z26 8D:/Code/Quartus/garland/RGB_LED.vhd
+Z27 FD:/Code/Quartus/garland/RGB_LED.vhd
 l0
 L30
-V`S3FST3UH3`8mICWR8Ebd1
-!s100 hz[VKiSP<76lYXL=;0HKG3
+VF<eMFY_QAXZX_keaY9`Tm2
+!s100 `6ZSUCN22OFnbMF<9k=D72
 R6
-31
-Z17 !s110 1645469380
-!i10b 1
-Z18 !s108 1645469380.000000
-Z19 !s90 -reportprogress|300|-93|-work|work|D:/Code/Quartus/garland/RGB_LED.vhd|
-Z20 !s107 D:/Code/Quartus/garland/RGB_LED.vhd|
+R20
+Z28 !s90 -reportprogress|300|-93|-work|work|D:/Code/Quartus/garland/RGB_LED.vhd|
+Z29 !s107 D:/Code/Quartus/garland/RGB_LED.vhd|
 !i113 1
-R11
+R23
 R12
 Argb_led_architecture
-R14
+R24
 R2
 R3
-DEx4 work 7 rgb_led 0 22 `S3FST3UH3`8mICWR8Ebd1
-l66
-L55
-V20DjI5IhmaJ<oa?Pkm1iR2
-!s100 MRNzeX^??6F?49H?5L29<1
-R6
+DEx4 work 7 rgb_led 0 22 F<eMFY_QAXZX_keaY9`Tm2
 31
-R17
+R16
 !i10b 1
-R18
-R19
+l69
+L58
+VHg1QUlIjiCTQ=oT;3O3[82
+!s100 ?Q;Z5Z@W14o_KgMXUEiN53
+R6
 R20
+R28
+R29
 !i113 1
-R11
+R23
 R12
 Ergb_logic
-Z21 w1645454373
-R14
+R24
 R2
 R3
+31
+R16
+!i10b 1
+Z30 w1645704598
 R0
-Z22 8D:/Code/Quartus/garland/RGB_logic.vhd
-Z23 FD:/Code/Quartus/garland/RGB_logic.vhd
+Z31 8D:/Code/Quartus/garland/RGB_logic.vhd
+Z32 FD:/Code/Quartus/garland/RGB_logic.vhd
 l0
 L30
-VJEkca_fVYTB?a064OY;kH0
-!s100 <6l__H04k`@9Sj:1]PNBg1
+VAPlMI0c7G3jLTA>;;EfTB2
+!s100 b]dcY:lAzaAZ6oPLEcIGM2
 R6
-31
-R17
-!i10b 1
-R18
-Z24 !s90 -reportprogress|300|-93|-work|work|D:/Code/Quartus/garland/RGB_logic.vhd|
-Z25 !s107 D:/Code/Quartus/garland/RGB_logic.vhd|
+R20
+Z33 !s90 -reportprogress|300|-93|-work|work|D:/Code/Quartus/garland/RGB_logic.vhd|
+Z34 !s107 D:/Code/Quartus/garland/RGB_logic.vhd|
 !i113 1
-R11
+R23
 R12
 Argb_logic_architecture
-R14
+R24
 R2
 R3
-DEx4 work 9 rgb_logic 0 22 JEkca_fVYTB?a064OY;kH0
-l69
-L54
-VB:]O4_66VzPH6i@i=2??^3
-!s100 WQn0e3M_X]jke?K0:hBK31
-R6
+DEx4 work 9 rgb_logic 0 22 APlMI0c7G3jLTA>;;EfTB2
 31
-R17
+R16
 !i10b 1
-R18
-R24
-R25
+l74
+L56
+V@i^[Bo;[CN31aa=FEiI_j1
+!s100 [[b@PUe1QH?1P9jG_iXJN3
+R6
+R20
+R33
+R34
 !i113 1
-R11
+R23
 R12

@@ -42,7 +42,9 @@ button_0 : IN STD_LOGIC;
 button_1 : IN STD_LOGIC;
 sw : IN STD_LOGIC_VECTOR (0 to 3);
 feedback_ready : IN STD_LOGIC;
-led_data : OUT STD_LOGIC_VECTOR (0 to bit_counter_max)
+
+led_data : OUT STD_LOGIC_VECTOR (0 to 95)
+-- led_data : OUT STD_LOGIC_VECTOR (0 to bit_counter_max)
 );
 -- {{ALTERA_IO_END}} DO NOT REMOVE THIS LINE!
 
@@ -58,6 +60,7 @@ signal st: led_st_type:= st_idle;
 type rgb_array_type is array (0 to number_of_LEDs-1) of std_logic_vector (0 to bit_counter_max);
 signal GRB: rgb_array_type := (others => (others => '0'));
 signal i: integer range 0 to number_of_LEDs-1 :=0;
+signal j: integer range 0 to number_of_LEDs-1 :=0;
 signal green: unsigned (0 to 7):= (others => '0');
 signal red: unsigned (0 to 7):= (others => '0');
 signal blue: unsigned (0 to 7):= (others => '0');
@@ -73,9 +76,6 @@ BEGIN
 logic:process(i_clk,button_0,button_1,sw)
     begin
 	 
-	 sw_buff <= sw;
-	 sw_buff_buff <= sw_buff;
-	 
         if button_0 = '0' then
             led_data <= (others => '0');
             count_for_st_1and2<=0;
@@ -85,6 +85,9 @@ logic:process(i_clk,button_0,button_1,sw)
             button_buff <= button_1;
             button_buff_2 <= button_buff;
             
+            sw_buff <= sw;
+	        sw_buff_buff <= sw_buff;
+
             if button_buff = '0' and button_buff_2 = '1'  then
                 menu <= menu + 1;
                 count_for_st_1and2 <= 0;
@@ -92,6 +95,7 @@ logic:process(i_clk,button_0,button_1,sw)
 
             case st is
                 when st_idle =>
+                    i<=0;
                     if menu = 0 then 
                         st <= st_1_0;
                     elsif menu = 1 then 
@@ -99,32 +103,21 @@ logic:process(i_clk,button_0,button_1,sw)
                     elsif menu = 2 then st <= st_3;
                     elsif menu = 3 then st <= st_4;
                     end if;
-                    
-                when st_send =>
-                    if feedback_ready = '1' then
-                        led_data <= GRB(i);
-                        if i = number_of_LEDs-1 then
-                            i<= 0;
-                            st<=st_delay;
-                        else 
-                            i<= i+1;
-                        end if;
-                    end if;
 
                 when st_1_0 =>
-                        if count_for_st_1and2 = 0 then
-                            green <=    "00000000";
-                            red <=      "00000000";
-                            blue <=     "00010000";
-                            count_for_st_1and2 <= 1;
-                            st<=st_1_1;
-                        elsif count_for_st_1and2 = 1 then 
-                            st<=st_1_1;
-                        elsif count_for_st_1and2 = 2 then 
-                            st<=st_1_2;
-                        elsif count_for_st_1and2 = 3 then 
-                            st<=st_1_3;
-                        end if;
+                    if count_for_st_1and2 = 0 then
+                        green <=    "00000000";
+                        red <=      "00000000";
+                        blue <=     "00010000";
+                        count_for_st_1and2 <= 1;
+                        st<=st_1_1;
+                    elsif count_for_st_1and2 = 1 then 
+                        st<=st_1_1;
+                    elsif count_for_st_1and2 = 2 then 
+                        st<=st_1_2;
+                    elsif count_for_st_1and2 = 3 then 
+                        st<=st_1_3;
+                    end if;
 
                 when st_1_1 =>
                     if green < "00010000" then
@@ -234,9 +227,9 @@ logic:process(i_clk,button_0,button_1,sw)
                     end if;
 
                 when st_2_BG_1 =>
-                    if red < "00010000" then
+                    if blue < "00010000" then
                         blue <= blue + 1;
-                        red <= red + 1;
+                        green <= green + 1;
                         st <= st_send;
                         GRB(0) <= "00000000" & "00000000" & std_logic_vector(blue);
                         GRB(1) <= std_logic_vector(green) & "00000000" & "00000000";
@@ -248,9 +241,9 @@ logic:process(i_clk,button_0,button_1,sw)
                     end if;
 
                 when st_2_BG_2 =>
-                    if red > "00000000" then
+                    if blue > "00000000" then
                         blue <= blue - 1;
-                        red <= red - 1;
+                        green <= green - 1;
                         st <= st_send;
                         GRB(0) <= "00000000" & "00000000" & std_logic_vector(blue);
                         GRB(1) <= std_logic_vector(green) & "00000000" & "00000000";
@@ -270,14 +263,18 @@ logic:process(i_clk,button_0,button_1,sw)
                             GRB(i) <= "00000000" & "00000000" & "00000000";
                         end if;
                     end loop;
+                    i<=0;
                     st <= st_send;
                 
                 when st_4 =>
-                    if sw_buff_buff(i) = '1' then
-                        GRB(i) <= "00010000" & "00000000" & "00000000";
-                    else
-                        GRB(i) <= "00000000" & "00010000" & "00000000";
-                    end if;
+                    for i in 0 to number_of_LEDs-1 loop
+                        if sw_buff_buff(i) = '1' then
+                            GRB(i) <= "00010000" & "00000000" & "00000000";
+                        else
+                            GRB(i) <= "00000000" & "00010000" & "00000000";
+                        end if;
+                    end loop;
+                    i<=0;
                     st <= st_send;
                 
                 when st_form_pocket =>
@@ -288,7 +285,22 @@ logic:process(i_clk,button_0,button_1,sw)
                             GRB(i) <= "00000000" & "00000000" & "00000000";
                         end if;
                     end loop;
+                    i<=0;
                     st <= st_send;
+
+                when st_send =>
+                    if feedback_ready = '1' then
+                        -- led_data <= GRB(j);
+                        -- if j = number_of_LEDs-1 then
+                        --     j<= 0;
+                        --     st<=st_delay;
+                        -- else 
+                        --     j<= j+1;
+                        -- end if;
+                        led_data <= GRB(0) & GRB(1) & GRB(2) & GRB(3);
+                        st<= st_delay;
+
+                    end if;
                 
                 when st_delay =>
 					if delay < delay_max then

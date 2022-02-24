@@ -59,6 +59,11 @@ refer to the applicable agreement for further details.
 		(line (pt 288 48)(pt 272 48)(line_width 1))
 	)
 	(parameter
+		"number_of_LEDs"
+		"4"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
 		"long_timing"
 		"40"
 		""
@@ -70,7 +75,7 @@ refer to the applicable agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"bit_counter_max"
-		"23"
+		"95"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter

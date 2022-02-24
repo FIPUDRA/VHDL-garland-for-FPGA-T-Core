@@ -20,7 +20,7 @@ refer to the applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 296 160)
+	(rect 16 16 240 160)
 	(text "RGB_logic" (rect 5 0 48 12)(font "Arial" ))
 	(text "inst" (rect 8 128 20 140)(font "Arial" ))
 	(port
@@ -59,11 +59,11 @@ refer to the applicable agreement for further details.
 		(line (pt 0 96)(pt 16 96)(line_width 1))
 	)
 	(port
-		(pt 280 32)
+		(pt 224 32)
 		(output)
-		(text "led_data[0..bit_counter_max]" (rect 0 0 115 12)(font "Arial" ))
-		(text "led_data[0..bit_counter_max]" (rect 144 27 259 39)(font "Arial" ))
-		(line (pt 280 32)(pt 264 32)(line_width 3))
+		(text "led_data[0..95]" (rect 0 0 57 12)(font "Arial" ))
+		(text "led_data[0..95]" (rect 146 27 203 39)(font "Arial" ))
+		(line (pt 224 32)(pt 208 32)(line_width 3))
 	)
 	(parameter
 		"bit_counter_max"
@@ -72,7 +72,7 @@ refer to the applicable agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"delay_max"
-		"224"
+		"3572"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
@@ -81,7 +81,7 @@ refer to the applicable agreement for further details.
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
-		(rectangle (rect 16 16 264 128)(line_width 1))
+		(rectangle (rect 16 16 208 128)(line_width 1))
 	)
-	(annotation_block (parameter)(rect 296 -64 396 16))
+	(annotation_block (parameter)(rect 240 -64 340 16))
 )

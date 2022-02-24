@@ -150,7 +150,7 @@ refer to the applicable agreement for further details.
 		(pt 192 32)
 		(output)
 		(text "green_led[0..3]" (rect 0 0 73 12)(font "Arial" ))
-		(text "green_led[0..3]" (rect 110 27 183 39)(font "Arial" ))
+		(text "green_led[0..3]" (rect 110 27 171 39)(font "Arial" ))
 		(line (pt 192 32)(pt 176 32)(line_width 3))
 	)
 	(parameter
@@ -162,6 +162,72 @@ refer to the applicable agreement for further details.
 		(rectangle (rect 16 16 176 96))
 	)
 	(annotation_block (parameter)(rect 456 -56 668 -18))
+)
+(symbol
+	(rect 264 176 488 320)
+	(text "RGB_logic" (rect 5 0 56 12)(font "Arial" ))
+	(text "inst3" (rect 8 128 31 140)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "i_clk" (rect 0 0 22 12)(font "Arial" ))
+		(text "i_clk" (rect 21 27 43 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "button_0" (rect 0 0 42 12)(font "Arial" ))
+		(text "button_0" (rect 21 43 63 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "button_1" (rect 0 0 42 12)(font "Arial" ))
+		(text "button_1" (rect 21 59 63 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "sw[0..3]" (rect 0 0 38 12)(font "Arial" ))
+		(text "sw[0..3]" (rect 21 75 59 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "feedback_ready" (rect 0 0 80 12)(font "Arial" ))
+		(text "feedback_ready" (rect 21 91 101 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 224 32)
+		(output)
+		(text "led_data[0..95]" (rect 0 0 73 12)(font "Arial" ))
+		(text "led_data[0..95]" (rect 142 27 203 39)(font "Arial" ))
+		(line (pt 224 32)(pt 208 32)(line_width 3))
+	)
+	(parameter
+		"bit_counter_max"
+		"23"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"delay_max"
+		"3125000"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"number_of_LEDs"
+		"4"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 208 128))
+	)
+	(annotation_block (parameter)(rect 544 280 770 356))
 )
 (symbol
 	(rect 704 144 992 256)
@@ -203,6 +269,11 @@ refer to the applicable agreement for further details.
 		(line (pt 288 48)(pt 272 48))
 	)
 	(parameter
+		"number_of_LEDs"
+		"4"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
 		"long_timing"
 		"40"
 		""
@@ -214,7 +285,7 @@ refer to the applicable agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"bit_counter_max"
-		"23"
+		"95"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
@@ -225,73 +296,7 @@ refer to the applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 272 96))
 	)
-	(annotation_block (parameter)(rect 992 48 1192 144))
-)
-(symbol
-	(rect 264 176 544 320)
-	(text "RGB_logic" (rect 5 0 56 12)(font "Arial" ))
-	(text "inst3" (rect 8 128 31 140)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "i_clk" (rect 0 0 22 12)(font "Arial" ))
-		(text "i_clk" (rect 21 27 43 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "button_0" (rect 0 0 42 12)(font "Arial" ))
-		(text "button_0" (rect 21 43 63 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "button_1" (rect 0 0 42 12)(font "Arial" ))
-		(text "button_1" (rect 21 59 63 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "sw[0..3]" (rect 0 0 38 12)(font "Arial" ))
-		(text "sw[0..3]" (rect 21 75 59 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "feedback_ready" (rect 0 0 80 12)(font "Arial" ))
-		(text "feedback_ready" (rect 21 91 101 103)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96))
-	)
-	(port
-		(pt 280 32)
-		(output)
-		(text "led_data[0..bit_counter_max]" (rect 0 0 142 12)(font "Arial" ))
-		(text "led_data[0..bit_counter_max]" (rect 139 27 281 39)(font "Arial" ))
-		(line (pt 280 32)(pt 264 32)(line_width 3))
-	)
-	(parameter
-		"bit_counter_max"
-		"23"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"delay_max"
-		"3125000"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"number_of_LEDs"
-		"4"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 264 128))
-	)
-	(annotation_block (parameter)(rect 544 280 770 356))
+	(annotation_block (parameter)(rect 1000 8 1225 122))
 )
 (connector
 	(pt 264 32)
@@ -354,11 +359,6 @@ refer to the applicable agreement for further details.
 	(pt 264 224)
 )
 (connector
-	(pt 544 208)
-	(pt 704 208)
-	(bus)
-)
-(connector
 	(pt 560 160)
 	(pt 248 160)
 )
@@ -418,6 +418,11 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 456 16)
 	(pt 496 16)
+	(bus)
+)
+(connector
+	(pt 488 208)
+	(pt 704 208)
 	(bus)
 )
 (junction (pt 184 208))

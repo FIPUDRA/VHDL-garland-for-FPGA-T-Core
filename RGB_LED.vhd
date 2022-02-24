@@ -34,7 +34,10 @@ ENTITY RGB_LED IS
         number_of_LEDs : integer :=4;
         long_timing : INTEGER := 40;
         short_timing : INTEGER := 15;
-        bit_counter_max : INTEGER := 23;
+
+        -- bit_counter_max : INTEGER := 23;
+        bit_counter_max : INTEGER := 95;
+        
         delay_max : INTEGER := 14000
     );
 	PORT
@@ -124,16 +127,17 @@ BEGIN
                         led_st <= st_read_bit;
                     else
                         bit_counter <= 0;
-                        led_st <= st_led_count;
+                        -- led_st <= st_led_count;
+                        led_st <= st_rst_delay;
                     end if;
                 
-                when st_led_count =>
-                    if count_led = number_of_LEDs-1 then
-                        led_st <= st_rst_delay;
-                    else 
-                        count_led <= count_led+1;
-                        led_st <= st_idle;
-                    end if;
+                -- when st_led_count =>
+                --     if count_led = number_of_LEDs-1 then
+                --         led_st <= st_rst_delay;
+                --     else 
+                --         count_led <= count_led+1;
+                --         led_st <= st_idle;
+                --     end if;
 
                 when st_rst_delay =>
                     if reset_delay < delay_max then
