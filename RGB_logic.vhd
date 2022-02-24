@@ -65,11 +65,17 @@ signal menu: integer range 0 to 2 := 0;
 signal count_for_st_1and2: integer range 0 to 6:= 0;
 signal button_buff: std_logic;
 signal button_buff_2: std_logic;
+signal sw_buff:std_logic_vector (0 to 3);
+signal sw_buff_buff:std_logic_vector (0 to 3);
 signal delay: integer range 0 to delay_max:=0;
 BEGIN
 
 logic:process(i_clk,button_0,button_1,sw)
     begin
+	 
+	 sw_buff <= sw;
+	 sw_buff_buff <= sw_buff;
+	 
         if button_0 = '0' then
             led_data <= (others => '0');
             count_for_st_1and2<=0;
@@ -258,7 +264,7 @@ logic:process(i_clk,button_0,button_1,sw)
 
                 when st_3 =>
                     for i in 0 to number_of_LEDs-1 loop
-                        if sw(i) = '1' then
+                        if sw_buff_buff(i) = '1' then
                             GRB(i) <= "00000000" & "00010000" & "00000000";
                         else
                             GRB(i) <= "00000000" & "00000000" & "00000000";
@@ -267,7 +273,7 @@ logic:process(i_clk,button_0,button_1,sw)
                     st <= st_send;
                 
                 when st_4 =>
-                    if sw(i) = '1' then
+                    if sw_buff_buff(i) = '1' then
                         GRB(i) <= "00010000" & "00000000" & "00000000";
                     else
                         GRB(i) <= "00000000" & "00010000" & "00000000";
@@ -276,7 +282,7 @@ logic:process(i_clk,button_0,button_1,sw)
                 
                 when st_form_pocket =>
                     for i in 0 to number_of_LEDs-1 loop
-                        if sw(i) = '1' then
+                        if sw_buff_buff(i) = '1' then
                             GRB(i) <= std_logic_vector(green) & std_logic_vector(red) & std_logic_vector(blue);
                         else
                             GRB(i) <= "00000000" & "00000000" & "00000000";

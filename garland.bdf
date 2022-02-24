@@ -89,7 +89,7 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 456 8 632 24)
+	(rect 496 8 672 24)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "green_led[0..3]" (rect 90 0 163 12)(font "Arial" ))
 	(pt 0 8)
@@ -102,7 +102,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 632 24 704 48))
+	(annotation_block (location)(rect 672 24 744 48))
 )
 (pin
 	(output)
@@ -414,6 +414,11 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 1008 192)
 	(pt 992 192)
+)
+(connector
+	(pt 456 16)
+	(pt 496 16)
+	(bus)
 )
 (junction (pt 184 208))
 (junction (pt 200 224))

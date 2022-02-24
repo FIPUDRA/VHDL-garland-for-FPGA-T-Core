@@ -1,5 +1,5 @@
 Analysis & Synthesis report for garland
-Mon Feb 21 22:25:40 2022
+Thu Feb 24 11:50:30 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -57,7 +57,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Feb 21 22:25:40 2022       ;
+; Analysis & Synthesis Status        ; Successful - Thu Feb 24 11:50:30 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; garland                                     ;
 ; Top-level Entity Name              ; garland                                     ;
@@ -774,7 +774,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -1065,7 +1065,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Feb 21 22:24:38 2022
+    Info: Processing started: Thu Feb 24 11:48:38 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off garland -c garland
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file garland.bdf
@@ -1082,6 +1082,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file rgb_log
 Info (12127): Elaborating entity "garland" for the top level hierarchy
 Info (12128): Elaborating entity "RGB_LED" for hierarchy "RGB_LED:inst2"
 Info (12128): Elaborating entity "RGB_logic" for hierarchy "RGB_logic:inst3"
+Warning (10492): VHDL Process Statement warning at RGB_logic.vhd(77): signal "sw_buff" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Code/Quartus/garland/RGB_logic.vhd Line: 77
 Info (12128): Elaborating entity "garland_logic" for hierarchy "garland_logic:inst1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_uo14.tdf
     Info (12023): Found entity 1: altsyncram_uo14 File: D:/Code/Quartus/garland/db/altsyncram_uo14.tdf Line: 27
@@ -1105,7 +1106,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_drb File: D:/Code/Quartus/garland/db/cmpr_drb.tdf Line: 22
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2022.02.21.23:25:19 Progress: Loading sld6945a69b/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2022.02.24.12:49:51 Progress: Loading sld6945a69b/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1137,10 +1138,10 @@ Info (21057): Implemented 3050 device resources after synthesis - the final reso
     Info (21059): Implemented 6 output pins
     Info (21061): Implemented 2913 logic cells
     Info (21064): Implemented 120 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4863 megabytes
-    Info: Processing ended: Mon Feb 21 22:25:40 2022
-    Info: Elapsed time: 00:01:02
-    Info: Total CPU time (on all processors): 00:01:49
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4845 megabytes
+    Info: Processing ended: Thu Feb 24 11:50:30 2022
+    Info: Elapsed time: 00:01:52
+    Info: Total CPU time (on all processors): 00:02:17
 
 

@@ -63,7 +63,7 @@ create_clock -name {i_clk} -period 20.000 -waveform { 0.000 10.000 } [get_ports 
 # Set Input Delay
 #**************************************************************
 
-
+set_input_delay -clock { i_clk } 0 [get_ports {sw[*]}]
 
 #**************************************************************
 # Set Output Delay

@@ -1,11 +1,11 @@
-Fitter Status : Successful - Mon Feb 21 22:26:19 2022
+Fitter Status : Successful - Thu Feb 24 11:51:21 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : garland
 Top-level Entity Name : garland
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 2,751 / 49,760 ( 6 % )
+Total logic elements : 2,724 / 49,760 ( 5 % )
     Total combinational functions : 1,525 / 49,760 ( 3 % )
     Dedicated logic registers : 2,192 / 49,760 ( 4 % )
 Total registers : 2192
