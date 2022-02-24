@@ -14,7 +14,7 @@
 
 -- PROGRAM		"Quartus Prime"
 -- VERSION		"Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
--- CREATED		"Thu Feb 24 15:17:30 2022"
+-- CREATED		"Thu Feb 24 16:34:20 2022"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -49,11 +49,12 @@ COMPONENT rgb_led
 GENERIC (bit_counter_max : INTEGER;
 			delay_max : INTEGER;
 			long_timing : INTEGER;
+			number_of_LEDs : INTEGER;
 			short_timing : INTEGER
 			);
 	PORT(i_clk : IN STD_LOGIC;
 		 button_0 : IN STD_LOGIC;
-		 i_led_data : IN STD_LOGIC_VECTOR(0 TO 23);
+		 i_led_data : IN STD_LOGIC_VECTOR(0 TO 95);
 		 o_data : OUT STD_LOGIC;
 		 feedback_ready : OUT STD_LOGIC
 	);
@@ -69,11 +70,11 @@ GENERIC (bit_counter_max : INTEGER;
 		 button_1 : IN STD_LOGIC;
 		 feedback_ready : IN STD_LOGIC;
 		 sw : IN STD_LOGIC_VECTOR(0 TO 3);
-		 led_data : OUT STD_LOGIC_VECTOR(0 TO 23)
+		 led_data : OUT STD_LOGIC_VECTOR(0 TO 95)
 	);
 END COMPONENT;
 
-SIGNAL	SYNTHESIZED_WIRE_0 :  STD_LOGIC_VECTOR(0 TO 23);
+SIGNAL	SYNTHESIZED_WIRE_0 :  STD_LOGIC_VECTOR(0 TO 95);
 SIGNAL	SYNTHESIZED_WIRE_1 :  STD_LOGIC;
 
 
@@ -91,9 +92,10 @@ PORT MAP(i_clk => i_clk,
 
 
 b2v_inst2 : rgb_led
-GENERIC MAP(bit_counter_max => 23,
+GENERIC MAP(bit_counter_max => 95,
 			delay_max => 14000,
 			long_timing => 40,
+			number_of_LEDs => 4,
 			short_timing => 15
 			)
 PORT MAP(i_clk => i_clk,

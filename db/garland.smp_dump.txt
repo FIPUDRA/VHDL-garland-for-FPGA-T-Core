@@ -11,24 +11,30 @@ garland_st.st_12 0 1 0 0 0 0 0 1
 garland_st.st_delay 1 0 0 0 0 0 0 1 
 
 State Machine - |garland|RGB_logic:inst3|st
-Name st.st_delay st.st_form_pocket st.st_4 st.st_3 st.st_2_BG_2 st.st_2_BG_1 st.st_2_RB_2 st.st_2_RB_1 st.st_2_GR_2 st.st_2_GR_1 st.st_2_0 st.st_1_3 st.st_1_2 st.st_1_1 st.st_1_0 st.st_send st.st_idle 
-st.st_idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-st.st_send 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
-st.st_1_0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
-st.st_1_1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
-st.st_1_2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
-st.st_1_3 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
-st.st_2_0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
-st.st_2_GR_1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
-st.st_2_GR_2 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
-st.st_2_RB_1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
-st.st_2_RB_2 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
-st.st_2_BG_1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
-st.st_2_BG_2 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
-st.st_3 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
-st.st_4 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-st.st_form_pocket 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-st.st_delay 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+Name st.st_delay st.st_form_pocket st.st_4 st.st_3_6 st.st_3_5 st.st_3_4 st.st_3_3 st.st_3_2 st.st_3_1 st.st_3_0 st.st_2_BG_2 st.st_2_BG_1 st.st_2_RB_2 st.st_2_RB_1 st.st_2_GR_2 st.st_2_GR_1 st.st_2_0 st.st_1_3 st.st_1_2 st.st_1_1 st.st_1_0 st.st_send st.st_idle 
+st.st_idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+st.st_send 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+st.st_1_0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+st.st_1_1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+st.st_1_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+st.st_1_3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+st.st_2_0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+st.st_2_GR_1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+st.st_2_GR_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+st.st_2_RB_1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+st.st_2_RB_2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+st.st_2_BG_1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+st.st_2_BG_2 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+st.st_3_0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.st_3_1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.st_3_2 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.st_3_3 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.st_3_4 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.st_3_5 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.st_3_6 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.st_4 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.st_form_pocket 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.st_delay 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 
 State Machine - |garland|RGB_LED:inst2|led_st
 Name led_st.st_rst_delay led_st.st_led_count led_st.st_bits_count led_st.st_send_0 led_st.st_send_1 led_st.st_read_bit led_st.st_idle 

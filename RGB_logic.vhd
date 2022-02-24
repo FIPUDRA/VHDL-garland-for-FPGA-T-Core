@@ -55,7 +55,7 @@ END RGB_logic;
 
 ARCHITECTURE RGB_logic_architecture OF RGB_logic IS
 
-type led_st_type is (st_idle, st_send, st_1_0, st_1_1, st_1_2, st_1_3, st_2_0, st_2_GR_1, st_2_GR_2, st_2_RB_1, st_2_RB_2, st_2_BG_1, st_2_BG_2, st_3, st_4, st_form_pocket, st_delay);
+type led_st_type is (st_idle, st_send, st_1_0, st_1_1, st_1_2, st_1_3, st_2_0, st_2_GR_1, st_2_GR_2, st_2_RB_1, st_2_RB_2, st_2_BG_1, st_2_BG_2, st_3_0, st_3_1, st_3_2, st_3_3, st_3_4, st_3_5, st_3_6, st_4, st_form_pocket, st_delay);
 signal st: led_st_type:= st_idle;
 type rgb_array_type is array (0 to number_of_LEDs-1) of std_logic_vector (0 to bit_counter_max);
 signal GRB: rgb_array_type := (others => (others => '0'));
@@ -100,7 +100,7 @@ logic:process(i_clk,button_0,button_1,sw)
                         st <= st_1_0;
                     elsif menu = 1 then 
                         st <= st_2_0;
-                    elsif menu = 2 then st <= st_3;
+                    elsif menu = 2 then st <= st_3_0;
                     elsif menu = 3 then st <= st_4;
                     end if;
 
@@ -254,17 +254,74 @@ logic:process(i_clk,button_0,button_1,sw)
                         st<=st_2_0;
                     end if;
 
+                when st_3_0 =>
+					if count_for_st_1and2 = 0 then
+                        green <=    "00000000";
+                        red <=      "00000000";
+                        blue <=     "00010000";
+                        count_for_st_1and2 <= 1;
+						st <=st_3_1;
+					elsif count_for_st_1and2 = 1 then
+						st <=st_3_1;
+					elsif count_for_st_1and2 = 2 then
+						st <=st_3_2;
+					elsif count_for_st_1and2 = 3 then
+						st <=st_3_3;
+					elsif count_for_st_1and2 = 4 then
+						st <=st_3_4;
+					elsif count_for_st_1and2 = 5 then
+						st <=st_3_5;
+                    elsif count_for_st_1and2 = 6 then
+                        st <=st_3_6;
+					end if;
 
-                when st_3 =>
-                    for i in 0 to number_of_LEDs-1 loop
-                        if sw_buff_buff(i) = '1' then
-                            GRB(i) <= "00000000" & "00010000" & "00000000";
-                        else
-                            GRB(i) <= "00000000" & "00000000" & "00000000";
-                        end if;
-                    end loop;
-                    i<=0;
-                    st <= st_send;
+				when st_3_1 =>
+                    GRB(0) <= std_logic_vector(green) & std_logic_vector(red) & std_logic_vector(blue);
+                    GRB(1) <= "00000000" & "00000000" & "00000000";
+                    GRB(2) <= "00000000" & "00000000" & "00000000";
+                    GRB(3) <= "00000000" & "00000000" & "00000000";
+					count_for_st_1and2 <= 2;
+					st <=st_send;
+
+				when st_3_2 =>
+                    GRB(0) <= "00000000" & "00000000" & "00000000";
+                    GRB(1) <= std_logic_vector(green) & std_logic_vector(red) & std_logic_vector(blue);
+                    GRB(2) <= "00000000" & "00000000" & "00000000";
+                    GRB(3) <= "00000000" & "00000000" & "00000000";
+                    count_for_st_1and2 <= 3;
+                    st <=st_send;
+
+				when st_3_3 =>
+                    GRB(0) <= "00000000" & "00000000" & "00000000";
+                    GRB(1) <= "00000000" & "00000000" & "00000000";
+                    GRB(2) <= std_logic_vector(green) & std_logic_vector(red) & std_logic_vector(blue);
+                    GRB(3) <= "00000000" & "00000000" & "00000000";
+                    count_for_st_1and2 <= 4;
+                    st <=st_send;
+					
+				when st_3_4 =>
+                    GRB(0) <= "00000000" & "00000000" & "00000000";
+                    GRB(1) <= "00000000" & "00000000" & "00000000";
+                    GRB(2) <= "00000000" & "00000000" & "00000000";
+                    GRB(3) <= std_logic_vector(green) & std_logic_vector(red) & std_logic_vector(blue);
+					count_for_st_1and2 <= 5;
+					st <=st_send;
+
+				when st_3_5 =>
+					GRB(0) <= "00000000" & "00000000" & "00000000";
+                    GRB(1) <= "00000000" & "00000000" & "00000000";
+                    GRB(2) <= std_logic_vector(green) & std_logic_vector(red) & std_logic_vector(blue);
+                    GRB(3) <= "00000000" & "00000000" & "00000000";
+                    count_for_st_1and2 <= 6;
+                    st <=st_send;
+
+				when st_3_6 =>
+					GRB(0) <= "00000000" & "00000000" & "00000000";
+                    GRB(1) <= std_logic_vector(green) & std_logic_vector(red) & std_logic_vector(blue);
+                    GRB(2) <= "00000000" & "00000000" & "00000000";
+                    GRB(3) <= "00000000" & "00000000" & "00000000";
+                    count_for_st_1and2 <= 1;
+                    st <=st_send;
                 
                 when st_4 =>
                     for i in 0 to number_of_LEDs-1 loop
